@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Notes X</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="toolbar">
+            <div class="toolbar-left">
+                <button id="bold">B</button>
+                <button id="italic">I</button>
+                <button id="underline">U</button>
+                <select id="fontSize">
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="20">20</option>
+                </select>
+            </div>
+            <div class="toolbar-right">
+                Notes X v.0.3 - quick notes for browser
+            </div>
+        </div>
+        <div contenteditable="true" id="editor" class="editor"></div>
+        <div class="buttons">
+            <button id="save">Save as</button>
+            <button id="clear">Clear</button>
+        </div>
+        <div class="watermark">
+            <img src="icon.png" alt="Watermark">
+        </div>
+    </div>
+    <div id="saveModal" class="modal">
+        <div class="modal-content">
+            <h3>Save File</h3>
+            <input type="text" id="fileName" placeholder="Enter file name" value="notes">
+            <select id="fileFormat">
+                <option value="txt" selected>txt</option>
+                <option value="html">html</option>
+                <option value="css">css</option>
+                <option value="rtf">rtf</option>
+            </select>
+            <button id="confirmSave">Save</button>
+            <button id="cancelSave">Cancel</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
